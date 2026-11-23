@@ -1,0 +1,39 @@
+.codigo {
+  font-family: var(--mantine-font-family-monospace);
+  letter-spacing: 0.04em;
+}
+
+.linha-clicavel {
+  cursor: pointer;
+}
+
+/* Foco sempre visível para quem navega por teclado */
+:focus-visible {
+  outline: 2px solid var(--mantine-color-indigo-5);
+  outline-offset: 2px;
+}
+
+.celula-patio {
+  width: 100%;
+  min-height: 52px;
+  border-radius: var(--mantine-radius-sm);
+  border: 1px solid var(--mantine-color-default-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--mantine-font-size-sm);
+  transition: transform 80ms ease;
+}
+
+.celula-patio:hover {
+  transform: translateY(-1px);
+}
+
+.celula-patio[data-bloqueado='true'] {
+  border: 2px solid var(--mantine-color-red-6);
+}
+
+.celula-patio[data-destaque='true'] {
+  outline: 3px solid var(--mantine-color-orange-5);
+}
